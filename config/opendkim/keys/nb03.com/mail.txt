@@ -1,0 +1,2 @@
+mail._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC8W0tqzQFxSeoj4dywHtidofz7auauPGp+nP/gm0dPv09XuvVhMOWPkY70jr1wD1nBjEJwhWHlkhpeCy0ZQsfy4P72+P2efkFx1jLmcKD91z5PiKKMuNjqdzfPpnxYrBIC7WZbNgV/yWzWdrrV8Z6Fm35oIIDJqYKzoDdBKQ7kYwIDAQAB" )  ; ----- DKIM key mail for nb03.com
