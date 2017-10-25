@@ -38,9 +38,13 @@ mv docker-compose.yml.dist  docker-compose.yml
  
  
  ./setup.sh email add nykma@example.com PassW0rd!
+ 
 ./setup.sh email list # 应该能看到 nykma@example.com
+
 ./setup.sh alias add @example.com nykma@example.com
+
 ./setup.sh alias list # 应该能看到 @example.com nykma@example.com,
+
 docker run --rm -v "$(pwd)/config":/tmp/docker-mailserver -it tvial/docker-mailserver:latest generate-dkim-config
 
 
@@ -48,6 +52,7 @@ docker run --rm -v "$(pwd)/config":/tmp/docker-mailserver -it tvial/docker-mails
 
 
 如果是自己搭建的bind，直接把这段塞进域名的hosts文件就行。如果使用的是第三方解析，就去后台添加一条TXT记录，记录名是mail._domainkey，记录值是将两段引号内的字符串拼接起来即可，如我的就是：
+
 
 v=DKIM1; k=rsa;p=MIGfMA0GCSqGSIb3DPENNNNNNNNNNCBiQKBgQCy9JV3FnXjLjsRJs/N0fy1C233333IV7t3f7fWpv/lo4NsoPEtG693hTgApkhuLl9KeV233333DMTagtXN898lXenKFEIS4COi7X/RjbGuOoApg4qS23333333TfXsrjN3xVC78E9T/HrS6pJN5fX+1s+1s+1s+1s+1s+1sIDAQAB
 
